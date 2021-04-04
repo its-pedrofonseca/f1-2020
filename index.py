@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import constructors
 
 # Connect to main app.py file
-from app import app
+from app import app, server
 
 # Connect to your app pages
 import racetracks
