@@ -49,7 +49,7 @@ def selected_constructor_diff(constructor):
     time_per_race = fl.loc[fl['Team'] == constructor].groupby('name_x', as_index=False)['fastestLapTime'].min()
     time_per_race = time_per_race.fastestLapTime
     time_diffc = pd.DataFrame(champion_time.subtract(time_per_race))
-    time_diffc['color']=['red' if val<0 else 'lawngreen' for val in time_diffc.fastestLapTime]
+    time_diffc['color']=['#ce2b37' if val<0 else '#009246' for val in time_diffc.fastestLapTime]
     time_diffc['Time Difference (s)'] = time_diffc['fastestLapTime']
     return time_diffc
 
@@ -212,7 +212,7 @@ def update_graph2(team):
     return fig4
 
 pistas = df_drivers2["name_x"].unique()
-print(pistas)
+#print(pistas)
 
 @app.app.callback(
     Output('graph_time', 'figure'),
@@ -224,12 +224,14 @@ def graph2(team):
                   y='Time Difference (s)',
                   color='color',
                   color_discrete_sequence=selected_constructor_diff(team).color.unique(),
-                  hover_data={'color':False},
+                  hover_data={'color':True},
                   #labels={pistas: 'Tracks'}
                   )
     fig2.update_traces(showlegend = False)
     fig2.update_layout(barmode='stack', paper_bgcolor='rgba(255,255,255)', plot_bgcolor='rgba(0,0,0,0)', xaxis_title="Race",
     yaxis_title="Time Difference in Seconds")
+    fig2.update_traces(
+        hovertemplate='Racetracks: %{x} <br>Time Difference (s): %{y} s <extra></extra>')
     fig2.update_yaxes(gridcolor='black', showgrid=True, gridwidth=0.5)
 
     return fig2

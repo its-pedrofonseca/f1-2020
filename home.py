@@ -10,7 +10,7 @@ import dash_core_components as dcc
 F1_TEAMS = "https://simracingsetup.com/wp-content/uploads/2020/02/F1-2020-All-Team-Desktop-Wallpaper.jpg"
 
 def table_drivers():
-    fig = go.Figure(data=[go.Table(header=dict(values=['Position', 'Team', 'Code', 'Name', 'Points']),
+    fig = go.Figure(data=[go.Table(header=dict(values=['Position', 'Team', 'Code', 'Name', 'Points'],fill_color = '#31343b', font=dict(color='white', size=12)),
                                    cells=dict(values=[
                                        ['1º', '2º', '3º', '4º', '5º', '6º', '7º', '8º', '9º', '10º', '11º', '12º',
                                         '13º', '14º', '15º', '16º', '17º', '18º', '19º', '20º', '21º', '22º', '23º'],
@@ -28,19 +28,20 @@ def table_drivers():
                                         'Antonio Giovinazzi', 'George Russell', 'Romain Grosjean', 'Kevin Magnussen',
                                         'Nicholas Latifi', 'Pietro Fittipaldi', 'Jack Aitken'],
                                        [347, 223, 214, 125, 119, 105, 105, 98, 97, 75, 75, 62, 33, 32, 10, 4, 4, 3, 2,
-                                        1, 0, 0, 0]]))
+                                        1, 0, 0, 0]],fill_color = '#f0f0f0', font=dict(color='black', size=12)))
                           ])
     return fig
 
 
 def table_cons():
-    fig = go.Figure(data=[go.Table(header=dict(values=['Position', 'Team', 'Points']),
+    fig = go.Figure(data=[go.Table(header=dict(values=['Position', 'Team', 'Points'],fill_color = '#31343b', font=dict(color='white', size=12)),
                                    cells=dict(values=[['1º', '2º', '3º', '4º', '5º', '6º', '7º', '8º', '9º', '10º'],
                                                       ['Mercedes', 'Red Bull', 'McLaren', 'Racing Point', 'Renault',
                                                        'Ferrari', 'AlphaTauri', 'Alfa Romeo', 'Haas F1 Team',
                                                        'Williams'],
-                                                      [573, 319, 202, 195, 181, 131, 107, 8, 3, 0]
-                                                      ])),
+                                                      [573, 319, 202, 195, 181, 131, 107, 8, 3, 0],
+                                                      ],fill_color = '#f0f0f0', font=dict(color='black', size=12)
+                                              ))
                           ])
     return fig
 

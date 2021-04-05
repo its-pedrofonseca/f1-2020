@@ -244,8 +244,8 @@ def graph2(driver):
         name='Fastest Lap Recorded',
         orientation='h',
         marker=dict(
-            color='rgba(255, 0, 0, 0.7)',
-            line=dict(color='rgba(246, 78, 139, 1.0)', width=3)
+            color='#009246',
+            line=dict(color='rgba(0,146,70,0.3)', width=3)
         )
     ))
     fig.add_trace(go.Bar(
@@ -254,8 +254,8 @@ def graph2(driver):
         name=driver,
         orientation='h',
         marker=dict(
-            color='rgba(58, 71, 80, 0.6)',
-            line=dict(color='rgba(58, 71, 80, 1.0)', width=3)
+            color='#ce2b37',
+            line=dict(color='rgba(206,43,55,0.3)', width=3)
         ),
     ))
     fig.update_layout(barmode='stack',paper_bgcolor='rgba(255,255,255)',plot_bgcolor='rgba(0,0,0,0)', xaxis_title="Fastest Lap Time in Seconds",

@@ -107,7 +107,7 @@ def map(df):
                                                       ),
                                       showocean=True,
                                       oceancolor='azure',
-                                      bgcolor='#f9f9f9',
+                                      bgcolor='#f0f0f0',
                                       ),
 
                              title=dict(
