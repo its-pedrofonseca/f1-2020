@@ -56,13 +56,33 @@ def map(df):
          'Mercedes',
          'Mercedes, Racing Point BWT Mercedes',
          'Mercedes, Racing Point BWT Mercedes',
-         'Max Verstappen'
+         'Red Bull Racing Honda'
+         ]
+
+    l2 = ['Austrian Grand Prix, Styrian Grand Prix',
+         'Austrian Grand Prix, Styrian Grand Prix',
+         'Hungarian Grand Prix',
+         'British Grand Prix, 70th Anniversary Grand Prix',
+         'British Grand Prix, 70th Anniversary Grand Prix',
+         'Spanish Grand Prix',
+         'Belgian Grand Prix',
+         'Italian Grand Prix',
+         'Tuscan Grand Prix',
+         'Russian Grand Prix',
+         'Eifel Grand Prix',
+         'Portuguese Grand Prix',
+         'Emilia Romagna Grand Prix',
+         'Turkish Grand Prix',
+         'Bahrain Grand Prix, Sakhir Grand Prix',
+         'Bahrain Grand Prix, Sakhir Grand Prix',
+         'Abu Dhabi Grand Prix',
          ]
 
     df_racetracks = df_racetracks.sort_values(by=['raceId'])
 
     df_racetracks["winner"] = l
     df_racetracks["winner_cons"] = l1
+    df_racetracks["pistasss"] = l2
 
 
     data_scattergeo = dict(type='scattergeo',
@@ -70,7 +90,7 @@ def map(df):
                            lon=df_racetracks['lng'],
                            #text=df_racetracks['name_y'],
                            mode=['markers', 'lines', 'text'][0],
-                           hovertemplate=#'Grand Prix: ' + df_racetracks["name_x"] + '<br>'+
+                           hovertemplate='Grand Prix: ' + df_racetracks["pistasss"] + '<br>'+
                                          'Racetrack: ' + df_racetracks["name_y"] + '<br>'+
                                          'Location: ' + df_racetracks["location"] + '<br>'+
                                          'Country: ' + df_racetracks["country"] + '<br>'+

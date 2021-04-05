@@ -212,6 +212,7 @@ def update_graph2(team):
     return fig4
 
 pistas = df_drivers2["name_x"].unique()
+print(pistas)
 
 @app.app.callback(
     Output('graph_time', 'figure'),
