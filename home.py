@@ -151,7 +151,7 @@ layout = dbc.Container([
                     html.H6('Datasets: https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020', className="text-left")
                 ],width=6),
                 dbc.Col([
-                    html.H6('Members: Frederico Rodrigues - m2020583, Gonçalo Carvalho - m2020664, Pedro Fonseca - m20201037', className="text-right")
+                    html.H6('Team: Frederico Rodrigues - m2020583, Gonçalo Carvalho - m2020664, Pedro Fonseca - m20201037', className="text-right")
                 ],width=6)
             ]),
     ], fluid=True)

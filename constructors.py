@@ -223,9 +223,11 @@ def graph2(team):
                   y='Time Difference (s)',
                   color='color',
                   color_discrete_sequence=selected_constructor_diff(team).color.unique(),
+                  hover_data={'color':False},
+                  #labels={pistas: 'Tracks'}
                   )
     fig2.update_traces(showlegend = False)
-    fig2.update_layout(barmode='stack',paper_bgcolor='rgba(255,255,255)',plot_bgcolor='rgba(0,0,0,0)',xaxis_title="Race",
+    fig2.update_layout(barmode='stack', paper_bgcolor='rgba(255,255,255)', plot_bgcolor='rgba(0,0,0,0)', xaxis_title="Race",
     yaxis_title="Time Difference in Seconds")
     fig2.update_yaxes(gridcolor='black', showgrid=True, gridwidth=0.5)
 
